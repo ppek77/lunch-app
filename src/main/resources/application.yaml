@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: lunch-app
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydatabase
+    username: myuser
+    password: secret
