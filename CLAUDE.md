@@ -4,7 +4,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A Spring Boot web application for tracking lunch costs. Uses server-side rendering with Thymeleaf + HTMX rather than a separate frontend framework.
+A Spring Boot web application for tracking lunch costs. 
+Uses server-side rendering with Thymeleaf + HTMX rather than a separate frontend framework.
+
+Designed to be used mostly on mobile devices.
+
+Authentication is required to access the application. Once logged in, the user can view the lunch costs summary 
+or enter the new lunch details. The details of a lunch are the date of the lunch, meal costs and amount paid.
+
+Once logged in, the user stays logged in until they explicitly log out.
+
+There is no user management or registration. This is a single user application, 
+and the user credentials are hardcoded in the application resources.
 
 **Package:** `info.pekny.lunchapp`
 

@@ -5,3 +5,7 @@ spring:
     url: jdbc:postgresql://localhost:5432/lunchapp
     username: appuser
     password: secretpassword
+
+lunch-app:
+  username: pavel
+  password: secret
