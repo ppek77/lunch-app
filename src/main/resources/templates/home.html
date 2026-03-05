@@ -106,6 +106,51 @@
             text-align: center;
             margin-top: 0.5rem;
         }
+
+        .action-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .action-btn + .action-btn {
+            margin-top: 0.625rem;
+        }
+
+        .btn-primary {
+            background: #4f46e5;
+            color: #fff;
+            margin-top: 1.25rem;
+        }
+
+        .btn-primary:hover {
+            background: #4338ca;
+        }
+
+        .btn-primary:active {
+            background: #3730a3;
+        }
+
+        .btn-secondary {
+            background: #e5e5e5;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d4d4d4;
+        }
+
+        .btn-secondary:active {
+            background: #c4c4c4;
+        }
     </style>
 </head>
 <body>
@@ -147,5 +192,8 @@
     <div th:if="${stats.lunchCount > 0}" class="lunch-count">
         Based on <span th:text="${stats.lunchCount}"></span> lunch(es)
     </div>
+
+    <a th:href="@{/lunch/new}" class="action-btn btn-primary">Add lunch</a>
+    <a th:href="@{/lunch/history}" class="action-btn btn-secondary">Lunch history</a>
 </body>
 </html>

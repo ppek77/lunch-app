@@ -9,4 +9,6 @@ import info.pekny.lunchapp.entity.Lunch;
 public interface LunchRepository extends JpaRepository<Lunch, Long> {
 
 	List<Lunch> findAllByOrderByDateDesc();
+
+	List<Lunch> findTop50ByOrderByDateDesc();
 }

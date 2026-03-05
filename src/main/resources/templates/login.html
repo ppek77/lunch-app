@@ -98,7 +98,7 @@
             height: 1rem;
         }
 
-        button[type="submit"] {
+        input[type="submit"] {
             width: 100%;
             padding: 0.75rem;
             background: #4f46e5;
@@ -111,11 +111,11 @@
             transition: background 0.15s;
         }
 
-        button[type="submit"]:hover {
+        input[type="submit"]:hover {
             background: #4338ca;
         }
 
-        button[type="submit"]:active {
+        input[type="submit"]:active {
             background: #3730a3;
         }
     </style>
@@ -135,12 +135,12 @@
         <form th:action="@{/login}" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" autocomplete="username" autofocus required>
+                <input type="text" id="username" name="username" autocomplete="username" enterkeyhint="next" autofocus required>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" autocomplete="current-password" required>
+                <input type="password" id="password" name="password" autocomplete="current-password" enterkeyhint="go" required>
             </div>
 
             <div class="remember-me">
@@ -148,7 +148,7 @@
                 <label for="remember-me">Remember me</label>
             </div>
 
-            <button type="submit">Sign in</button>
+            <input type="submit" value="Sign in">
         </form>
     </div>
 </body>
