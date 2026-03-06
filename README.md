@@ -40,3 +40,7 @@ docker compose up -d
 # Build OCI container image
 ./mvnw spring-boot:build-image
 ```
+
+## Deployment
+
+See [DEPLOY.md](DEPLOY.md) for instructions on deploying to a DigitalOcean Droplet with HTTPS.
