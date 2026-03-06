@@ -92,6 +92,8 @@ services:
     image: YOUR_DOCKERHUB_USER/lunch-app:1.0.0
     restart: unless-stopped
     environment:
+      JAVA_TOOL_OPTIONS: -XX:MaxMetaspaceSize=100M -XX:ReservedCodeCacheSize=50M -XX:MaxDirectMemorySize=10M -Xmx200M
+      BPL_JVM_THREAD_COUNT: 20
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/lunchapp
       SPRING_DATASOURCE_USERNAME: ${DB_USERNAME}
       SPRING_DATASOURCE_PASSWORD: ${DB_PASSWORD}
@@ -111,7 +113,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U $${DB_USERNAME} -d lunchapp"]
+      test: ["CMD-SHELL", "pg_isready -d lunchapp"]
       interval: 5s
       timeout: 3s
       retries: 5
